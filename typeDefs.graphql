@@ -1,0 +1,5 @@
+# PhotoShare GraphQL Schema 
+
+type Query {
+    gnar: String
+}

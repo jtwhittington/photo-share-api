@@ -1,10 +1,7 @@
 const { GraphQLServer } = require('graphql-yoga')
+const fs = require('fs')
 
-const typeDefs = `
-    type Query {
-        gnar: String
-    }
-`
+const typeDefs = fs.readFileSync('./typeDefs.graphql', 'UTF-8')
 
 const resolvers = {
     Query: {
