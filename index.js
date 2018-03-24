@@ -8,6 +8,7 @@ require('dotenv').config()
 
 const resolvers = require('./resolvers')
 
+const resolvers = require('./resolvers')
 const typeDefs = fs.readFileSync('./typeDefs.graphql', 'UTF-8')
 const testUploadForm = fs.readFileSync('./test-upload.html', 'UTF-8')
 
