@@ -1,6 +1,6 @@
 module.exports = {
     postPhoto(root, args, { photos }) {
-        photos.push(args)
-        return args
+        photos.push(args.input)
+        return args.input
     }
 }

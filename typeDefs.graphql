@@ -13,10 +13,16 @@ enum PhotoCategory {
   GRAPHIC
 }
 
+input PostPhotoInput {
+  name: String!
+  description: String
+  category: PhotoCategory=PORTRAIT
+}
+
 type Query {
     totalPhotos: Int!
 }
 
 type Mutation {
-    postPhoto(name: String!, description: String, category: PhotoCategory=PORTRAIT): Photo!
+    postPhoto(input:PostPhotoInput!): Photo!
 }
