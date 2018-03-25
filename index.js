@@ -6,7 +6,11 @@ const photos = require('./data/sample-photos')
 const resolvers = require('./resolvers')
 const typeDefs = fs.readFileSync('./typeDefs.graphql', 'UTF-8')
 
-const context = { photos, users }
+const context = { 
+    photos, 
+    users,
+    user: users[0]
+}
 
 const server = new GraphQLServer({ typeDefs, resolvers, context })
 
