@@ -3,6 +3,7 @@ const fs = require('fs')
 const users = require('./data/sample-users')
 const photos = require('./data/sample-photos')
 const tags = require('./data/sample-tags')
+require('dotenv').config()
 
 const resolvers = require('./resolvers')
 const typeDefs = fs.readFileSync('./typeDefs.graphql', 'UTF-8')
