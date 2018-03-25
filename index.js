@@ -10,6 +10,12 @@ server.express.get('/', (req, res) => {
     res.end('Welcome to the PhotoShare API')
 })
 
-server.start(
-    () => console.log(`graph service running - http://localhost:4000`)
-)
+const options = {
+    port: 4000,
+    endpoint: '/graphql',
+    playground: '/playground'
+}
+
+const ready = ({ port }) => console.log(`graph service running - http://localhost:${port}`)
+
+server.start(options, ready)
