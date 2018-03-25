@@ -3,6 +3,14 @@
 type Photo {
     name: String!
     description: String
+    category: PhotoCategory!
+}
+
+enum PhotoCategory {
+  PORTRAIT
+  ACTION
+  LANDSCAPE
+  GRAPHIC
 }
 
 type Query {
@@ -10,5 +18,5 @@ type Query {
 }
 
 type Mutation {
-    postPhoto(name: String!, description: String): Photo!
+    postPhoto(name: String!, description: String, category: PhotoCategory=PORTRAIT): Photo!
 }
