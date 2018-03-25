@@ -1,10 +1,18 @@
 const { findBy } = require('../lib')
+const { ObjectID } = require('mongodb')
 
 module.exports = {
-    totalPhotos: (root, args, ctx) => ctx.photos.length,
-    allPhotos: (root, args, ctx) => ctx.photos,
-    Photo: (root, args, ctx) => findBy(args.id, ctx.photos),
-    totalUsers: (root, args, ctx) => ctx.users.length,
-    allUsers: (root, args, ctx) => ctx.users,
-    User: (root, args, ctx) => findBy(args.id, ctx.users)
+
+    totalPhotos: (root, args, { photos }) => photos.count(),
+    
+    allPhotos: (root, args, { photos }) => photos.find().sort({ _id: -1 }).toArray(),
+    
+    Photo: (root, args, { photos }) => photos.findOne({ _id: ObjectID(args.id) }),
+    
+    totalUsers: (root, args, { users }) => users.count(),
+    
+    allUsers: (root, args, { users }) => users.find().toArray(),
+    
+    User: (root, args, { users }) => users.findOne({ _id: ObjectID(args.id) })
+
 }
