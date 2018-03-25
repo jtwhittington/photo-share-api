@@ -1,12 +1,12 @@
 const { GraphQLServer } = require('graphql-yoga')
 const fs = require('fs')
+const users = require('./data/sample-users')
+const photos = require('./data/sample-photos')
 
 const resolvers = require('./resolvers')
 const typeDefs = fs.readFileSync('./typeDefs.graphql', 'UTF-8')
 
-const context = {
-    photos: []
-}
+const context = { photos, users }
 
 const server = new GraphQLServer({ typeDefs, resolvers, context })
 
