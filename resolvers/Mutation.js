@@ -1,6 +1,12 @@
+const { v4 } = require('uuid')
+
 module.exports = {
     postPhoto(root, args, { photos }) {
-        photos.push(args.input)
-        return args.input
+        const newPhoto = {
+            id: v4(),
+            ...args.input
+        }
+        photos.push(newPhoto)
+        return newPhoto
     }
 }

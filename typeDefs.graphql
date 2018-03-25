@@ -1,7 +1,9 @@
 # PhotoShare GraphQL Schema 
 
 type Photo {
+    id: ID!
     name: String!
+    url: String!
     description: String
     category: PhotoCategory!
 }
@@ -21,6 +23,7 @@ input PostPhotoInput {
 
 type Query {
     totalPhotos: Int!
+    allPhotos: [Photo!]!
 }
 
 type Mutation {
