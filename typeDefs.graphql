@@ -13,6 +13,7 @@ type Photo {
     description: String
     category: PhotoCategory!
     postedBy: User!
+    taggedUsers: [User!]!
 }
 
 enum PhotoCategory {
