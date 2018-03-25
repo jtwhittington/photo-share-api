@@ -1,5 +1,7 @@
 # PhotoShare GraphQL Schema 
 
+scalar DateTime
+
 type User {
     id: ID!
     name: String!
@@ -15,6 +17,7 @@ type Photo {
     category: PhotoCategory!
     postedBy: User!
     taggedUsers: [User!]!
+    created: DateTime!
 }
 
 enum PhotoCategory {

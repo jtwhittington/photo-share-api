@@ -12,7 +12,8 @@ module.exports = {
         const newPhoto = {
             id: v4(),
             ...args.input,
-            userID: user.id
+            userID: user.id,
+            created: new Date()
         }
 
         photos.push(newPhoto)
