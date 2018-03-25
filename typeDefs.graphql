@@ -24,6 +24,7 @@ input PostPhotoInput {
 type Query {
     totalPhotos: Int!
     allPhotos: [Photo!]!
+    Photo(id: ID!): Photo
 }
 
 type Mutation {
