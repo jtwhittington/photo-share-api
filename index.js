@@ -4,7 +4,11 @@ const fs = require('fs')
 const resolvers = require('./resolvers')
 const typeDefs = fs.readFileSync('./typeDefs.graphql', 'UTF-8')
 
-const server = new GraphQLServer({ typeDefs, resolvers })
+const context = {
+    photos: []
+}
+
+const server = new GraphQLServer({ typeDefs, resolvers, context })
 
 server.express.get('/', (req, res) => {
     res.end('Welcome to the PhotoShare API')

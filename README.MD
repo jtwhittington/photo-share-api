@@ -16,7 +16,7 @@ Iterations
 
 ### b. The Photo Type
 
-1. [ ] Counting the Photos
+1. [x] Counting the Photos
 2. [ ] Posting a Photo
 3. [ ] Handling Photo Categories
 4. [ ] Using an Input Type

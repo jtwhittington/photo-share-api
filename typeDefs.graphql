@@ -1,5 +1,5 @@
 # PhotoShare GraphQL Schema 
 
 type Query {
-    gnar: String
+    totalPhotos: Int!
 }

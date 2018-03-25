@@ -1,5 +1,3 @@
 module.exports = {
-    gnar() {
-        return 'gnarly!!!'
-    }
+    totalPhotos: (root, args, ctx) => ctx.photos.length
 }
