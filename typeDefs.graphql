@@ -5,6 +5,8 @@ scalar DateTime
 type User {
     id: ID!
     name: String!
+    githubLogin: String!
+    avatar: String!
     postedPhotos: [Photo!]!
     inPhotos: [Photo!]!
 }
@@ -45,4 +47,5 @@ type Query {
 type Mutation {
     postPhoto(input:PostPhotoInput!): Photo!
     tagPhoto(userID:ID! photoID:ID!): Photo!
+    addFakeUsers(count: Int = 10): [User!]!
 }

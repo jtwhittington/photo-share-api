@@ -1,10 +1,11 @@
 const { findBy } = require('../lib')
 
 module.exports = {
-    postedPhotos: ({id}, args, {photos}) => photos.filter(p => p.userID === id),
-    inPhotos: (root, args, { tags, photos }) => tags
-        .filter(tag => tag.userID === root.id)
-        .map(tag => tag.photoID)
-        .map(photoID => photos.map(x=>x.id).indexOf(photoID))
-        .map(index => photos[index])
+
+    id: root => root.id || root._id,
+
+    postedPhotos: (root, args, { photos }) => photos.find({ userID: root._id }).toArray(),
+    
+    inPhotos: (root, args, { tags, photos }) => []
+
 }

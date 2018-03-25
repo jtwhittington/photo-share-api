@@ -1,4 +1,5 @@
 const { findBy } = require('../lib')
+const fetch = require('node-fetch')
 
 module.exports = {
 
@@ -10,7 +11,7 @@ module.exports = {
 
         const newPhoto = {
             ...args.input,
-            userID: user.id,
+            userID: user._id,
             created: new Date()
         }
 
@@ -19,6 +20,24 @@ module.exports = {
 
         return newPhoto
 
+    },
+
+    async addFakeUsers(root, {count}, { users }) {
+        
+        var { results } = await fetch(`https://randomuser.me/api/?results=${count}`)
+            .then(res => res.json())
+        
+        var fakeUsers = results.map(r => ({
+          githubLogin: r.login.username,
+          name: `${r.name.first} ${r.name.last}`,
+          avatar: r.picture.thumbnail,
+          githubToken: r.login.sha1
+        }))
+
+        await users.insert(fakeUsers)
+        var newUsers = await users.find().sort({ _id: -1 }).limit(count).toArray()
+
+        return newUsers
     },
 
     tagPhoto: (root, { userID, photoID }, { tags, photos }) => {

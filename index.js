@@ -15,7 +15,7 @@ const start = async () => {
         photos: db.collection('photos'), 
         users: db.collection('users'),
         tags: db.collection('tags'),
-        user: { id: 'XYZ' }
+        user: await db.collection('users').findOne()
     }
     
     const server = new GraphQLServer({ typeDefs, resolvers, context })
