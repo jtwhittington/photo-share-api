@@ -32,6 +32,7 @@ type Query {
     Photo(id: ID!): Photo
     totalUsers: Int!
     allUsers: [User!]!
+    User(id: ID!): User
 }
 
 type Mutation {

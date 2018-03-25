@@ -5,5 +5,6 @@ module.exports = {
     allPhotos: (root, args, ctx) => ctx.photos,
     Photo: (root, args, ctx) => findBy(args.id, ctx.photos),
     totalUsers: (root, args, ctx) => ctx.users.length,
-    allUsers: (root, args, ctx) => ctx.users
+    allUsers: (root, args, ctx) => ctx.users,
+    User: (root, args, ctx) => findBy(args.id, ctx.users)
 }
