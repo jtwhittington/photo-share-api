@@ -1,5 +1,10 @@
 # PhotoShare GraphQL Schema 
 
+type User {
+    id: ID!
+    name: String!
+}
+
 type Photo {
     id: ID!
     name: String!
