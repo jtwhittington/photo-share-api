@@ -3,7 +3,7 @@ const { ObjectID } = require('mongodb')
 
 module.exports = {
 
-    async postPhoto(root, args, { photos, user }) {
+    async postPhoto(root, args, { photos, user, pubsub }) {
 
         if (!user) {
            throw new Error('only an authorized user can post a photo')
@@ -18,11 +18,13 @@ module.exports = {
         const { insertedIds } = await photos.insert(newPhoto)
         newPhoto.id = insertedIds[0]
 
+        pubsub.publish('photo-added', { newPhoto })
+
         return newPhoto
 
     },
 
-    async addFakeUsers(root, {count}, { users }) {
+    async addFakeUsers(root, {count}, { users, pubsub }) {
         
         var { results } = await generateFakeUsers(count)
         
@@ -35,7 +37,7 @@ module.exports = {
 
         await users.insert(fakeUsers)
         var newUsers = await users.find().sort({ _id: -1 }).limit(count).toArray()
-
+        newUsers.forEach(newUser => pubsub.publish('user-added', {newUser}))
         return newUsers
     },
 
@@ -81,6 +83,7 @@ module.exports = {
             
         }
 
+        pubsub.publish('user-added', { newUser: user })
         return { user, token: access_token }
         
     },
