@@ -57,3 +57,8 @@ type Mutation {
     tagPhoto(userID:ID! photoID:ID!): Photo!
     addFakeUsers(count: Int = 10): [User!]!
 }
+
+type Subscription {
+    newUser: User!
+    newPhoto: Photo!
+}

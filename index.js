@@ -1,4 +1,4 @@
-const { GraphQLServer } = require('graphql-yoga')
+const { GraphQLServer, PubSub } = require('graphql-yoga')
 const fs = require('fs')
 const bodyParser = require('body-parser')
 const { MongoClient } = require('mongodb')
@@ -12,6 +12,7 @@ const start = async () => {
     
     const client = await MongoClient.connect(process.env.DB_HOST)
     const db = client.db()
+    const pubsub = new PubSub()
 
     const context = async ({ request }) => {
 
@@ -19,6 +20,7 @@ const start = async () => {
         var githubToken = auth && auth.replace('bearer ', '')
 
         return { 
+            pubsub,
             photos: db.collection('photos'), 
             users: db.collection('users'),
             tags: db.collection('tags'),
@@ -39,7 +41,8 @@ const start = async () => {
     const options = {
         port: 4000,
         endpoint: '/graphql',
-        playground: '/playground'
+        playground: '/playground',
+        subscriptions: '/subscriptions'
     }
     
     const ready = ({ port }) => console.log(`graph service running - http://localhost:${port}`)
