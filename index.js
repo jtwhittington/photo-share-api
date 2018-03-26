@@ -41,7 +41,10 @@ const start = async () => {
     })
 
     server.express.get('/', (req, res) => {
-        res.end('Welcome to the PhotoShare API')
+        let url = `https://github.com/login/oauth/authorize?client_id=${process.env.CLIENT_ID}&scope=user`
+        res.end(`
+            <a href="${url}">Sign In with Github</a>
+        `)
     })
     
     const options = {
