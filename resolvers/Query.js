@@ -3,6 +3,8 @@ const { ObjectID } = require('mongodb')
 
 module.exports = {
 
+    me: (root, args, { user }) => user,
+    
     totalPhotos: (root, args, { photos }) => photos.count(),
     
     allPhotos: (root, args, { photos }) => photos.find().sort({ _id: -1 }).toArray(),

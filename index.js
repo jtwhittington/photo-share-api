@@ -13,11 +13,18 @@ const start = async () => {
     const client = await MongoClient.connect(process.env.DB_HOST)
     const db = client.db()
 
-    const context = { 
-        photos: db.collection('photos'), 
-        users: db.collection('users'),
-        tags: db.collection('tags'),
-        user: await db.collection('users').findOne()
+    const context = async ({ request }) => {
+
+        var auth = request.headers.authorization
+        var githubToken = auth && auth.replace('bearer ', '')
+
+        return { 
+            photos: db.collection('photos'), 
+            users: db.collection('users'),
+            tags: db.collection('tags'),
+            user: await db.collection('users').findOne({ githubToken })
+        }
+
     }
     
     const server = new GraphQLServer({ typeDefs, resolvers, context })
