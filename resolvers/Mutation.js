@@ -83,6 +83,21 @@ module.exports = {
 
         return { user, token: access_token }
         
-	}
+    },
+    
+    async fakeUserAuth (root, { id }, { users }) {
+
+        var user = await users.findOne({ _id: ObjectID(id)}) 
+
+        if (!user) {
+            throw new Error(`Cannot find user with id "${id}"`)
+        }
+
+        return { 
+            token: user.githubToken, 
+            user 
+        }
+
+    }
 
 }
