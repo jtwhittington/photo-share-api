@@ -1,6 +1,6 @@
 const { authorizeWithGithub } = require('../lib')
 const { ObjectID } = require('mongodb')
-const fetch = require('node-fetch')
+const { generateFakeUsers, authorizeWithGithub } = require('../lib')
 
 module.exports = {
 
@@ -25,8 +25,7 @@ module.exports = {
 
     async addFakeUsers(root, {count}, { users }) {
         
-        var { results } = await fetch(`https://randomuser.me/api/?results=${count}`)
-            .then(res => res.json())
+        var { results } = await generateFakeUsers(count)
         
         var fakeUsers = results.map(r => ({
           githubLogin: r.login.username,
