@@ -1,4 +1,5 @@
 const { findBy } = require('../lib')
+const { ObjectID } = require('mongodb')
 const fetch = require('node-fetch')
 
 module.exports = {
@@ -40,11 +41,12 @@ module.exports = {
         return newUsers
     },
 
-    tagPhoto: (root, { userID, photoID }, { tags, photos }) => {
+    async tagPhoto(root, newTag, { tags, photos }) {
         
-        tags.push({ userID, photoID })        
+        await tags.update(newTag, newTag, { upsert: true })
         
-        return findBy(photoID, photos)
+        return photos.findOne({ _id: ObjectID(newTag.photoID)}) 
+    
     }
 
 }
