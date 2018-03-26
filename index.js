@@ -13,9 +13,14 @@ const start = async () => {
     const db = client.db()
     const pubsub = new PubSub()
 
-    const context = async ({ request }) => {
+    const context = async ({ request, connection }) => {
 
-        var auth = request.headers.authorization
+        var auth = request ? 
+            request.headers.authorization : 
+            connection ? 
+                connection.context.Authorization : 
+                null
+                
         var githubToken = auth && auth.replace('bearer ', '')
 
         return { 
