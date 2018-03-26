@@ -1,5 +1,6 @@
 const { GraphQLServer } = require('graphql-yoga')
 const fs = require('fs')
+const bodyParser = require('body-parser')
 const { MongoClient } = require('mongodb')
 
 require('dotenv').config()
