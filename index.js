@@ -14,7 +14,7 @@ const start = async () => {
     const db = client.db()
     const pubsub = new PubSub()
 
-    const context = async ({ request }) => {
+    const context = async ({ request, connection }) => {
 
         var auth = request ? request.headers.authorization : null
      
