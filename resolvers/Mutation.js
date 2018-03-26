@@ -84,6 +84,7 @@ module.exports = {
             
         }
 
+        pubsub.publish('user-added', { newUser: user })
         return { user, token: access_token }
         
     },
