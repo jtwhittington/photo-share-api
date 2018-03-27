@@ -18,6 +18,9 @@ module.exports = {
         const { insertedIds } = await photos.insert(newPhoto)
         newPhoto.id = insertedIds[0]
 
+        const newFileName = path.join(__dirname, '..', 'assets', 'photos', `${newPhoto.id}.jpg`)
+        await uploadFile(args.input.file, newFileName)
+        
         pubsub.publish('photo-added', { newPhoto })
 
         return newPhoto

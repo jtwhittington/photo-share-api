@@ -1,10 +1,13 @@
 const { GraphQLServer, PubSub } = require('graphql-yoga')
+const express = require('express')
+const path = require('path')
 const fs = require('fs')
 const { MongoClient } = require('mongodb')
 
 require('dotenv').config()
 
 const resolvers = require('./resolvers')
+
 const typeDefs = fs.readFileSync('./typeDefs.graphql', 'UTF-8')
 const testUploadForm = fs.readFileSync('./test-upload.html', 'UTF-8')
 
@@ -31,6 +34,15 @@ const start = async () => {
     }
     
     const server = new GraphQLServer({ typeDefs, resolvers, context })
+
+    server.express.use(
+        '/img/photos', 
+        express.static(path.join(__dirname, 'assets', 'photos'))
+    )
+
+    server.express.get('/post', (req, res) => {
+        res.end(testUploadForm)
+    })
 
     server.express.get('/', (req, res) => {
         let url = `https://github.com/login/oauth/authorize?client_id=${process.env.CLIENT_ID}&scope=user`
