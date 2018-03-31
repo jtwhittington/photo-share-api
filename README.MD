@@ -60,7 +60,7 @@ Iterations
 
 ### g. Enhancements
 
-1. [x] Adding Subscription Support ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-f4...step-g1))
-2. [ ] Publishing Events 
+1. [x] Adding Subscription Support ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-f4...step-g1)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-g1))
+2. [x] Publishing Events ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-g1...step-g2))  
 3. [ ] Modifying the Schema to Support File Uploads
 4. [ ] Uploading File with postPhoto 
