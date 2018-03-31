@@ -26,8 +26,8 @@ Iterations
 
 ### c. The User Type
 
-1. [x] Adding the User Type ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-b6...step-c1))
-2. [ ] Adding Some Sample Data 
+1. [x] Adding the User Type ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-b6...step-c1)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-c1))
+2. [x] Adding Some Sample Data ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-c1...step-c2))
 3. [ ] Listing All Users 
 4. [ ] Querying a Single User
 5. [ ] Add User to postPhoto Mutation
