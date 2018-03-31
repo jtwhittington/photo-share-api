@@ -53,8 +53,8 @@ Iterations
 
 ### f. Github Authorization
 
-1. [x] Environment Variables ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-e6...step-f1)) 
-2. [ ] Adding Github Authorization Mutation 
+1. [x] Environment Variables ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-e6...step-f1)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-f1))
+2. [x] Adding Github Authorization Mutation ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-f1...step-f2))  
 3. [ ] Authorizing with Github 
 4. [ ] Authorizing Fake Users
 

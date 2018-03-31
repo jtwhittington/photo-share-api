@@ -47,6 +47,44 @@ module.exports = {
         
         return photos.findOne({ _id: ObjectID(newTag.photoID)}) 
     
-    }
+    },
+
+    async githubAuth(root, { code }, { users }) {
+        
+        var { message, access_token, avatar_url, login, name } = await authorizeWithGithub({
+            client_id: 'deba4977ddbd7ceee828',
+            client_secret: 'a2011f345ed346af36bc1c471973e1ddae3e04d9',
+            code
+        })
+
+        if (message) {
+            throw new Error(message)
+        }
+
+        var newUser = {
+            name,
+            githubLogin: login,
+            githubToken: access_token,
+            avatar: avatar_url
+        }
+
+		var user = await users.findOne({ githubLogin: login })
+        
+		if (user) {
+            
+            const { value } = await users.findOneAndUpdate({ login }, newUser)
+            user = value
+        
+        } else {
+        
+			var { insertedIds } = await users.insert(newUser)
+			newUser.id = insertedIds[0]
+            user = newUser
+            
+        }
+
+        return { user, token: access_token }
+        
+	}
 
 }
