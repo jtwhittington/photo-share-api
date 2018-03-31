@@ -1,6 +1,6 @@
 {
     "name": "photo-share-api",
-    "version": "0.0.2",
+    "version": "0.0.0",
     "description": "PhotoShare is the main back-end exercise for the GraphQL Workshop",
     "main": "index.js",
     "repository": "https://github.com/graphqlworkshop/photo-share-api",
