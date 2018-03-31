@@ -32,11 +32,11 @@ Iterations
 4. [x] Querying a Single User ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-c3...step-c4)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-c4))
 5. [x] Add User to postPhoto Mutation ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-c4...step-c5)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-c5))
 6. [x] Adding postedBy Connection ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-c5...step-c6)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-c6))
-7. [x] Adding postedPhotos ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-c6...step-c7)) 
+7. [x] Adding postedPhotos ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-c6...step-c7)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-c7))
 
 ### d. Tagging Photos
 
-1. [ ] Adding Sample Tags 
+1. [x] Adding Sample Tags ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-c7...step-d1)) 
 2. [ ] Finding Users Tagged in a Photo
 3. [ ] Finding All Photos where a User has Been Tagged 
 4. [ ] Adding the Tag Photo Mutation 
