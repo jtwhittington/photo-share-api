@@ -36,8 +36,8 @@ Iterations
 
 ### d. Tagging Photos
 
-1. [x] Adding Sample Tags ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-c7...step-d1)) 
-2. [ ] Finding Users Tagged in a Photo
+1. [x] Adding Sample Tags ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-c7...step-d1)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-d1))
+2. [x] Finding Users Tagged in a Photo ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-d1...step-d2)) 
 3. [ ] Finding All Photos where a User has Been Tagged 
 4. [ ] Adding the Tag Photo Mutation 
 5. [ ] Adding a Custom Scalar 
