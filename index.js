@@ -2,7 +2,6 @@ const { GraphQLServer, PubSub } = require('graphql-yoga')
 const express = require('express')
 const path = require('path')
 const fs = require('fs')
-const bodyParser = require('body-parser')
 const { MongoClient } = require('mongodb')
 
 require('dotenv').config()
