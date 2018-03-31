@@ -49,7 +49,7 @@ module.exports = {
     
     },
 
-    async githubAuth(root, { code }, { users }) {
+    async githubAuth(root, { code }, { users, pubsub }) {
         
         var { message, access_token, avatar_url, login, name } = await authorizeWithGithub({
             client_id: process.env.CLIENT_ID,
@@ -80,10 +80,10 @@ module.exports = {
 			var { insertedIds } = await users.insert(newUser)
 			newUser.id = insertedIds[0]
             user = newUser
+            pubsub.publish('user-added', { newUser: user })
             
         }
 
-        pubsub.publish('user-added', { newUser: user })
         return { user, token: access_token }
         
     },
