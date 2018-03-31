@@ -62,5 +62,5 @@ Iterations
 
 1. [x] Adding Subscription Support ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-f4...step-g1)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-g1))
 2. [x] Publishing Events ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-g1...step-g2)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-g2))
-3. [x] Modifying the Schema to Support File Uploads ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-g2...step-g3)) 
-4. [ ] Uploading File with postPhoto 
+3. [x] Modifying the Schema to Support File Uploads ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-g2...step-g3)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-g3))
+4. [x] Uploading File with postPhoto ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-g3...step-g4)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/master))

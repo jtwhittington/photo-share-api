@@ -42,11 +42,6 @@ type AuthPayload {
   user: User!
 }
 
-type AuthPayload {
-  token: String!
-  user: User!
-}
-
 type Query {
     me: User
     totalPhotos: Int!
