@@ -55,8 +55,8 @@ Iterations
 
 1. [x] Environment Variables ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-e6...step-f1)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-f1))
 2. [x] Adding Github Authorization Mutation ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-f1...step-f2)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-f2))
-3. [x] Authorizing with Github ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-f2...step-f3))
-4. [ ] Authorizing Fake Users
+3. [x] Authorizing with Github ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-f2...step-f3)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-f3))
+4. [x] Authorizing Fake Users ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-f3...step-f4))
 
 ### g. Enhancements
 
