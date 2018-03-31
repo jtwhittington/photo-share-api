@@ -40,10 +40,6 @@ const start = async () => {
         express.static(path.join(__dirname, 'assets', 'photos'))
     )
 
-    server.express.get('/post', (req, res) => {
-        res.end(testUploadForm)
-    })
-
     server.express.get('/', (req, res) => {
         let url = `https://github.com/login/oauth/authorize?client_id=${process.env.CLIENT_ID}&scope=user`
         res.end(`
