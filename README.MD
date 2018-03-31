@@ -18,8 +18,8 @@ Iterations
 
 1. [x] Counting the Photos ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-a6...step-b1)) 
 ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-b1))
-2. [x] Posting a Photo ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-b1...step-b2)) 
-3. [ ] Handling Photo Categories
+2. [x] Posting a Photo ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-b1...step-b2)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-b2))
+3. [x] Handling Photo Categories ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-b2...step-b3)) 
 4. [ ] Using an Input Type
 5. [ ] Listing All Photos
 6. [ ] Querying a Single Photo
