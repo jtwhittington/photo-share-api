@@ -1,4 +1,4 @@
-const { findBy } = require('../lib')
+const { authorizeWithGithub } = require('../lib')
 const { ObjectID } = require('mongodb')
 const fetch = require('node-fetch')
 
@@ -52,8 +52,8 @@ module.exports = {
     async githubAuth(root, { code }, { users }) {
         
         var { message, access_token, avatar_url, login, name } = await authorizeWithGithub({
-            client_id: 'deba4977ddbd7ceee828',
-            client_secret: 'a2011f345ed346af36bc1c471973e1ddae3e04d9',
+            client_id: process.env.CLIENT_ID,
+            client_secret: process.env.CLIENT_SECRET,
             code
         })
 
@@ -72,7 +72,7 @@ module.exports = {
         
 		if (user) {
             
-            const { value } = await users.findOneAndUpdate({ login }, newUser)
+            const { value } = await users.findOneAndUpdate({ githubLogin: login }, newUser)
             user = value
         
         } else {
