@@ -9,8 +9,8 @@ Iterations
 
 1. [x] Initial Project Folder
 2. [x] Basic GraphQL Yoga Setup ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/start...step-a2)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-a2))
-3. [x] Structure, Move Schema ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-a2...step-a3))
-4. [ ] Structure, Move Resolvers
+3. [x] Structure, Move Schema ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-a2...step-a3)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-a3))
+4. [x] Structure, Move Resolvers ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-a3...step-a4)) 
 5. [ ] Extend Express, Add Home Route
 6. [ ] GraphQL Yoga Options
 
