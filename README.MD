@@ -44,7 +44,7 @@ Iterations
 
 ### e. Incorporating a Database
 
-1. [x] Environment Variables ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-d7...step-e1)) 
+1. [x] Environment Variables ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-d5...step-e1)) 
 2. [ ] Adding a Database Connection to Context 
 3. [ ] Querying Data 
 4. [ ] Posting Photos to the Database 
