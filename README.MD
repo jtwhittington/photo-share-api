@@ -16,7 +16,7 @@ Iterations
 
 ### b. The Photo Type
 
-1. [x] Counting the Photos
+1. [x] Counting the Photos ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-a6...step-b1)) 
 2. [ ] Posting a Photo
 3. [ ] Handling Photo Categories
 4. [ ] Using an Input Type
