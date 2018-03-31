@@ -47,8 +47,8 @@ Iterations
 1. [x] Environment Variables ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-d5...step-e1))([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-e1))
 2. [x] Adding a Database Connection to Context ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-e1...step-e2)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-e2))
 3. [x] Querying Data ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-e2...step-e3)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-e3))
-4. [x] Posting Photos to the Database ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-e3...step-e4)) 
-5. [ ] Adding Fake Users 
+4. [x] Posting Photos to the Database ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-e3...step-e4)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-e4))
+5. [x] Adding Fake Users ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-e4...step-e5)) 
 6. [ ] Tagging Photos with the Database 
 
 ### f. Github Authorization
