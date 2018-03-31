@@ -28,8 +28,8 @@ Iterations
 
 1. [x] Adding the User Type ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-b6...step-c1)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-c1))
 2. [x] Adding Some Sample Data ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-c1...step-c2)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-c1))
-3. [x] Listing All Users ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-c2...step-c3)) 
-4. [ ] Querying a Single User
+3. [x] Listing All Users ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-c2...step-c3)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-c3))
+4. [x] Querying a Single User ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-c3...step-c4))
 5. [ ] Add User to postPhoto Mutation
 6. [ ] Adding postedBy Connection
 7. [ ] Adding postedPhotos
