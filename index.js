@@ -6,6 +6,7 @@ require('dotenv').config()
 
 const resolvers = require('./resolvers')
 const typeDefs = fs.readFileSync('./typeDefs.graphql', 'UTF-8')
+const testUploadForm = fs.readFileSync('./test-upload.html', 'UTF-8')
 
 const start = async () => {
     
@@ -36,6 +37,10 @@ const start = async () => {
         res.end(`
             <a href="${url}">Sign In with Github</a>
         `)
+    })
+
+    server.express.get('/post', (req, res) => {
+        res.end(testUploadForm)
     })
     
     const options = {

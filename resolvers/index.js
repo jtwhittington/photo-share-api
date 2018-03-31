@@ -4,6 +4,7 @@ const Photo = require('./Photo')
 const User = require('./User')
 const DateTime = require('./DateTime')
 const Subscription = require('./Subscription')
+const { GraphQLUpload } = require('apollo-upload-server')
 
 module.exports = {
     Query,
@@ -11,5 +12,6 @@ module.exports = {
     Subscription,
     Photo,
     User,
-    DateTime
+    DateTime,
+    Upload: GraphQLUpload
 }
