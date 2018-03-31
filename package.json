@@ -7,10 +7,10 @@
     "author": "Moon Highway",
     "license": "MIT",
     "scripts": {
-        "start": "nodemon ."
+      "start": "nodemon ."
     },
     "dependencies": {
-        "graphql-yoga": "^1.6.1",
-        "nodemon": "^1.17.2"
+      "graphql-yoga": "^1.6.1",
+      "nodemon": "^1.17.2"
     }
 }
