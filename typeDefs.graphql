@@ -1,6 +1,7 @@
 # PhotoShare GraphQL Schema 
 
 scalar DateTime
+scalar Upload
 
 type User {
     id: ID!
@@ -33,6 +34,7 @@ input PostPhotoInput {
   name: String!
   description: String
   category: PhotoCategory=PORTRAIT
+  file: Upload!
 }
 
 type AuthPayload {
