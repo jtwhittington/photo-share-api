@@ -1,6 +1,5 @@
 const { GraphQLServer } = require('graphql-yoga')
 const fs = require('fs')
-const bodyParser = require('body-parser')
 const { MongoClient } = require('mongodb')
 
 require('dotenv').config()
@@ -28,24 +27,6 @@ const start = async () => {
     }
     
     const server = new GraphQLServer({ typeDefs, resolvers, context })
-    
-    server.express.use(bodyParser.json())
-    server.express.use((req, res, next) => {
-
-        const { query, operationName, variables } = req.body
-        let message = (query && operationName) ? 
-            `GraphQL Request ${operationName}` : 
-            `HTTP Request ${req.method} for ${req.url}`
-
-        if (variables) {
-            message += ` with variables: {${Object.keys(variables).join(', ')}}`
-        }    
-
-        console.log(message)
-
-        next()
-        
-    })
 
     server.express.get('/', (req, res) => {
         let url = `https://github.com/login/oauth/authorize?client_id=${process.env.CLIENT_ID}&scope=user`
