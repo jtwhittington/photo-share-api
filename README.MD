@@ -40,11 +40,11 @@ Iterations
 2. [x] Finding Users Tagged in a Photo ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-d1...step-d2))  ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-d2))
 3. [x] Finding All Photos where a User has Been Tagged ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-d2...step-d3)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-d3))
 4. [x] Adding the Tag Photo Mutation ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-d3...step-d4)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-d4))
-5. [x] Adding a Custom Scalar ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-d4...step-d5)) 
+5. [x] Adding a Custom Scalar ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-d4...step-d5)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-d5))
 
 ### e. Incorporating a Database
 
-1. [ ] Environment Variables 
+1. [x] Environment Variables ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-d7...step-e1)) 
 2. [ ] Adding a Database Connection to Context 
 3. [ ] Querying Data 
 4. [ ] Posting Photos to the Database 
