@@ -11,8 +11,8 @@ Iterations
 2. [x] Basic GraphQL Yoga Setup ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/start...step-a2)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-a2))
 3. [x] Structure, Move Schema ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-a2...step-a3)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-a3))
 4. [x] Structure, Move Resolvers ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-a3...step-a4)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-a4))
-5. [x] Extend Express, Add Home Route ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-a4...step-a5)) 
-6. [ ] GraphQL Yoga Options
+5. [x] Extend Express, Add Home Route ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-a4...step-a5)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-a5))
+6. [x] GraphQL Yoga Options ([diff](https://github.com/graphqlworkshop/photo-share-api/compare/step-a5...step-a6)) ([files](https://github.com/graphqlworkshop/photo-share-api/tree/step-a6))
 
 ### b. The Photo Type
 
