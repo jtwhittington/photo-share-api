@@ -1,6 +1,5 @@
-const { authorizeWithGithub } = require('../lib')
-const { ObjectID } = require('mongodb')
 const { generateFakeUsers, authorizeWithGithub } = require('../lib')
+const { ObjectID } = require('mongodb')
 
 module.exports = {
 
