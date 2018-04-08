@@ -3,6 +3,7 @@ const express = require('express')
 const path = require('path')
 const fs = require('fs')
 const { MongoClient } = require('mongodb')
+const depthLimit = require('graphql-depth-limit')
 
 require('dotenv').config()
 
@@ -55,7 +56,8 @@ const start = async () => {
         port: 4000,
         endpoint: '/graphql',
         playground: '/playground',
-        subscriptions: '/subscriptions'
+        subscriptions: '/subscriptions',
+        validationRules: [depthLimit(3)]
     }
     
     const ready = ({ port }) => console.log(`graph service running - http://localhost:${port}`)
