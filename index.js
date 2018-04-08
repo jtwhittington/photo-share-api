@@ -6,6 +6,7 @@ const { MongoClient } = require('mongodb')
 const depthLimit = require('graphql-depth-limit')
 const { createComplexityLimitRule } = require('graphql-validation-complexity')
 const { GraphQLError } = require('graphql/error')
+const { ApolloEngineLauncher } = require('apollo-engine')
 
 require('dotenv').config()
 
@@ -55,7 +56,7 @@ const start = async () => {
     })
     
     const options = {
-        port: 4000,
+        port: 4001,
         endpoint: '/graphql',
         playground: '/playground',
         subscriptions: '/subscriptions',
@@ -70,8 +71,20 @@ const start = async () => {
     const ready = ({ port }) => console.log(`graph service running - http://localhost:${port}`)
     
     let httpServer = await server.start(options, ready)
-
     httpServer.timeout = 5000
+
+    const launcher = new ApolloEngineLauncher({
+        apiKey: process.env.APOLLO_ENGINE_KEY,  
+        origins: [{
+            http: { url: 'http://localhost:4001/graphql' }
+        }],
+        frontends: [{
+            port: 4000,
+            endpoints: ['/graphql']
+        }]
+    })
+      
+    await launcher.start()
    
 }
 
