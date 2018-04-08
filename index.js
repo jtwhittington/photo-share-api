@@ -4,6 +4,8 @@ const path = require('path')
 const fs = require('fs')
 const { MongoClient } = require('mongodb')
 const depthLimit = require('graphql-depth-limit')
+const { createComplexityLimitRule } = require('graphql-validation-complexity')
+const { GraphQLError } = require('graphql/error')
 
 require('dotenv').config()
 
@@ -57,7 +59,12 @@ const start = async () => {
         endpoint: '/graphql',
         playground: '/playground',
         subscriptions: '/subscriptions',
-        validationRules: [depthLimit(5)]
+        validationRules: [
+            depthLimit(5),
+            createComplexityLimitRule(5000, {
+                onCost: cost => console.log('query cost:', cost)
+            })
+        ]
     }
     
     const ready = ({ port }) => console.log(`graph service running - http://localhost:${port}`)
