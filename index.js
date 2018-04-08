@@ -57,7 +57,7 @@ const start = async () => {
         endpoint: '/graphql',
         playground: '/playground',
         subscriptions: '/subscriptions',
-        validationRules: [depthLimit(3)]
+        validationRules: [depthLimit(5)]
     }
     
     const ready = ({ port }) => console.log(`graph service running - http://localhost:${port}`)
