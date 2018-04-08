@@ -60,7 +60,10 @@ const start = async () => {
     
     const ready = ({ port }) => console.log(`graph service running - http://localhost:${port}`)
     
-    server.start(options, ready)
+    let httpServer = await server.start(options, ready)
+
+    httpServer.timeout = 5000
+   
 }
 
 start()

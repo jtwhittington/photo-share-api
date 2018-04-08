@@ -1,6 +1,9 @@
 const fetch = require('node-fetch')
 const fs = require('fs')
 
+const delay = time => 
+    new Promise(resolves => setTimeout(resolves, time))
+
 const findBy = (value, array, field='id') =>
 	array[array.map(item=>item[field]).indexOf(value)]
 
@@ -47,4 +50,4 @@ const uploadFile = async (file, path) => {
     return saveFile(stream, path)
 }
 
-module.exports = {findBy, authorizeWithGithub, generateFakeUsers, uploadFile}
+module.exports = {findBy, authorizeWithGithub, generateFakeUsers, uploadFile, delay}
