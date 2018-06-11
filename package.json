@@ -10,7 +10,10 @@
         "start": "nodemon ."
     },
     "dependencies": {
+        "dotenv": "^6.0.0",
         "graphql-yoga": "^1.6.1",
-        "nodemon": "^1.17.2"
+        "mongodb": "^3.0.10",
+        "nodemon": "^1.17.2",
+        "uuid": "^3.2.1"
     }
 }
